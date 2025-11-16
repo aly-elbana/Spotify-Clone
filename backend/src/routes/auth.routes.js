@@ -1,9 +1,8 @@
 import { Router } from "express";
+import { authCallback } from "../controllers/auth.controller.js";
+
 const router = Router();
 
-router.get("/", (req, res) => {
-    res.status(200).json({ message: "Auth routes - Placeholder" });
-});
+router.post("/callback", authCallback);
 
 export default router;
-
